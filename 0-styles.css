@@ -1,0 +1,191 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container, section div, .footer-container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* HEADER */
+
+header {
+	background-color: transparent;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-container a {
+	color: white;
+}
+
+.headphones-logo {
+	width: 162px;
+	height: 32px;
+	background-image: url("images/logo_headphones.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.nav-list, .social-media ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 0 1.25rem;
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	font-size: .8rem;
+	color: initial;
+}
+
+.nav-link {
+	display: block;
+	position: relative;
+}
+
+@media (min-width: 480px) {
+	.nav-responsive-list {
+		display: none;
+		overflow: hidden;
+	}
+}
+
+.nav-responsive-list {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+
+@media (max-width: 480px) {
+	.nav-responsive-list svg {
+		cursor: pointer;
+	}
+	.navbar .nav-list {
+		display: none;
+		overflow: hidden;
+	}
+
+	header .headphones-logo {
+		position: relative;
+		left: 5em;
+	}
+
+	.nav-responsive-list:focus .nav-list{
+		display: block;
+		overflow: initial;
+		position: relative;
+		left: 32.5vw;
+		line-height: 2rem;
+	}
+}
+
+
+
+/* MAIN */
+
+main {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+}
+
+main section {
+	margin: 0;
+	padding: 0;
+}
+
+.intro {
+	background-image: url("images/headphones_hero_1.jpg");
+	background-position: center;
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-color: currentColor;
+	height: 50em;
+}
+
+.intro h1, .intro h3, .intro a, .intro p {
+	color: white;
+}
+
+@media (max-width: 480px) {
+	.intro {
+		background-position: -100vw;
+	}
+}
+
+.intro-container {
+	text-align: center;
+	position: relative;
+	top: 45%;
+	max-width: 50%;
+}
+
+@media (min-width: 480px) and (max-width: 820px) {
+	.intro-container {
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 480px) {
+	.intro-container {
+		max-width: 90%;
+	}
+}
+
+.call-to-action {
+	display: block;
+	z-index: 10;
+	background-color: #FF6565;
+	padding: 15px;
+	margin: 50px auto;
+	border-radius: 20px;
+	font-weight: bold;
+	width: 150px;
+}
+
+.what-we-do {
+	background-color: green;
+	width: 100vw;
+	height: 100px;
+}
+
+/* FOOTER */
+
+footer {
+	position: relative;
+}
+
+.footer-container {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+
+.logo-social {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.footer-container p {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
